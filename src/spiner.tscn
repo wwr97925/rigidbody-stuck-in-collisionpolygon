@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://rlgbh40sdqwr"]
+
+[ext_resource type="Script" path="res://src/spiner.gd" id="1_d104y"]
+
+[node name="spiner" type="Node2D"]
+rotation = 5.49459
+script = ExtResource("1_d104y")
+col = Color(0, 0, 0, 1)

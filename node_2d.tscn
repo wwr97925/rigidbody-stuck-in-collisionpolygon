@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://ctjk1saoihnoi"]
+
+[ext_resource type="PackedScene" uid="uid://b8872opwi4taa" path="res://src/arc.tscn" id="1_1qfkc"]
+[ext_resource type="PackedScene" uid="uid://rlgbh40sdqwr" path="res://src/spiner.tscn" id="2_a1536"]
+[ext_resource type="PackedScene" uid="uid://chikubk1beeyd" path="res://src/triangle_character_body.tscn" id="3_4mtgs"]
+[ext_resource type="PackedScene" uid="uid://bdkjnenpc0af0" path="res://src/circle_rigid_body.tscn" id="4_moc62"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xpwua"]
+resource_local_to_scene = true
+rough = true
+bounce = 1.0
+
+[node name="Node2d" type="Node2D"]
+
+[node name="Arc" parent="." instance=ExtResource("1_1qfkc")]
+position = Vector2(300, 300)
+outer_radius = 270.0
+width = 50.0
+degree = 180.0
+col = Color(1, 1, 1, 0)
+
+[node name="Arc2" parent="." instance=ExtResource("1_1qfkc")]
+position = Vector2(300, 300)
+rotation = 3.14159
+outer_radius = 270.0
+width = 50.0
+degree = 180.0
+col = Color(1, 1, 1, 0)
+
+[node name="CircleRigidBody" parent="." instance=ExtResource("4_moc62")]
+position = Vector2(192, 325)
+mass = 25.0
+physics_material_override = SubResource("PhysicsMaterial_xpwua")
+gravity_scale = 0.0
+radius = 5.0
+col = Color(1, 1, 1, 0)
+
+[node name="spiner" parent="." instance=ExtResource("2_a1536")]
+position = Vector2(300, 300)
+rotation = 5.551
+adds_scene = ExtResource("3_4mtgs")
+adds_number = 2
+width = 50.0
+height = 200.0
+col = Color(1, 1, 1, 0)

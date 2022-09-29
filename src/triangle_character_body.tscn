@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://chikubk1beeyd"]
+
+[ext_resource type="Script" path="res://src/triangle_character_body.gd" id="1_j6lmp"]
+
+[node name="TriangleCharacterBody" type="CharacterBody2D"]
+script = ExtResource("1_j6lmp")
+col = Color(1, 1, 1, 1)
+
+[node name="CollisionPolygon2d" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-10, 0, 10, 0, 0, 100, -10, 0)
+
+[node name="Polygon2d" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-10, 0, 10, 0, 0, 100, -10, 0)
